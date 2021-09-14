@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="thang">
+<button>số ngày là</button>
+<h1 id="res"></h1>
+<script>
+    function songayla() {
+        let thang = +document.getElementById('thang').value;
+        let res = ''
+        if (thang < 1 || thang > 12) {
+            res = 'nhập lại đi'
+        }
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                res += 'tháng' + thang + 'có 31 ngày'
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                res += 'tháng' + thang + 'có 30 ngày'
+                break;
+            case 2:
+                res += 'tháng' + thang + 'có 28 hoặc 29 ngày'
+                break;
+            default : {
+                res += 'sai rồi'
+                break;
+            }
+
+        }
+    }
+
+
+</script>
+</body>
+</html>
